@@ -1,7 +1,7 @@
 import socket
 
 tcp_server=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-tcp_server.bind('127.0.0.1','12345')
+tcp_server.bind(("127.0.0.1",8080))
 tcp_server.listen()
 print("sever starts listen")
 a,b=tcp_server.accept()
